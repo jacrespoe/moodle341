@@ -1,0 +1,51 @@
+/* Shoelace Custom CSS
+-------------------------*/
+/* stylelint-disable */
+/* Disabling as setting custom styles. */
+
+body {
+    background-image: [[setting:backgroundimage]];
+    background-attachment: [[setting:backgroundimageattach]];
+    background-repeat: [[setting:backgroundimagerepeat]];
+    background-size: [[setting:backgroundimagesize]];
+}
+
+a.logo {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    a.logo {
+        background-image: url('[[setting:logo]]');
+        [[setting:logoheight]]
+    }
+}
+
+@media (max-width: 767px) {
+    a.logo {
+        background-image: url('[[setting:compactlogo]]');
+        [[setting:compactlogoheight]]
+    }    
+}
+
+#region-main-shoelace-shadow {
+    /*
+    background: url([[pix:theme|shadow]]) no-repeat scroll 50% 100% / 96% 12px transparent;
+    padding-bottom: 12px;
+    */
+    margin: 0 auto;
+    display: block;
+    clear: both; /* Clear floats that are sometimes used to make the #region-main-shoelace fit the content, i.e Editing Quiz. */
+}
+
+/* Custom CSS Settings
+-------------------------*/
+[[setting:customcss]]
+
+/* stylelint-enable */

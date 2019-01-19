@@ -1,0 +1,6 @@
+[04-Mar-2018 10:59:57 America/Bogota] Default exception handler: No se puede pasar theme_adaptable de 2018011502 a 2017053000. Debug: 
+Error code: cannotdowngrade
+* line 656 of /lib/upgradelib.php: downgrade_exception thrown
+* line 1850 of /lib/upgradelib.php: call to upgrade_plugins()
+* line 694 of /admin/index.php: call to upgrade_noncore()
+

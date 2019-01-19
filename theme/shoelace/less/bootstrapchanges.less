@@ -1,0 +1,358 @@
+// My changes to Bootstrap
+
+// alerts.less / modals.less
+// --------------------------------------------------
+.alert {
+    border-radius: @shoelaceBorderRadius;
+}
+
+.alert,
+.modal-header {
+    .close {
+        color: @white;
+        .opacity(90);
+        &:hover,
+        &:focus {
+            .opacity(100);
+        }
+    }
+}
+
+.alert {
+    a {
+        color: inherit;
+    }
+}
+
+.alert-info a {
+    color: @infoText;
+}
+
+// breadcrumbs.less
+// --------------------------------------------------
+
+.breadcrumb {
+    background-color: @pageColour;
+    > li {
+        text-shadow: 0 1px 0 @textShadow;
+    }
+}
+
+// buttons.less
+// --------------------------------------------------
+.btn {
+    border-radius: @shoelaceBorderRadius;
+    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @themeTextColour, 0 1px 1px rgba(red(@btnBackground), green(@btnBackground), blue(@btnBackground), .75));
+}
+
+// Redo with text colour added.
+.btn-primary {
+    .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight, @themeTextColour);
+}
+
+// Warning appears are orange
+.btn-warning {
+    .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight, @warningText);
+}
+// Danger and error appear as red
+.btn-danger {
+    .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight, @white);
+}
+// Success appears as green
+.btn-success {
+    .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight, @white);
+}
+// Info appears as a neutral blue
+.btn-info {
+    .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight, @white);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+    .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight, @white);
+}
+
+// code.less
+code,
+pre {
+    background-color: @pageColour;
+    color: @textColor;
+}
+
+// dropdowns.less.
+
+// Hover/Focus state
+// -----------
+@media (max-width: @navbarCollapseWidth) {
+    .navbar-inverse .dropdown-menu > li > a:hover,
+    .navbar-inverse .dropdown-menu > li > a:focus,
+    .navbar-inverse .dropdown-submenu:hover > a,
+    .navbar-inverse .dropdown-submenu:focus > a {
+        #gradient > .vertical(@navbarInverseBackgroundHighlight, darken(@navbarInverseBackgroundHighlight, 5%));
+    }
+}
+
+// forms.less
+// --------------------------------------------------
+legend {
+    color: @textColor;
+}
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    background-color: inherit;
+    border-color: @bodyBackgroundAlt;
+    border-radius: @shoelaceBorderRadius;
+    color: inherit;
+}
+
+textarea,
+.uneditable-input {
+    width: 96%;
+}
+
+.form-actions {
+    border-top: 1px solid @bodyBackground;
+}
+
+.help-block,
+.help-inline {
+    color: lighten(@textColor, 5%); // lighten the text some for contrast
+}
+
+// mixins.less
+// --------------------------------------------------
+.tab-focus() {
+    // Default
+    outline: thin dotted @textColor;
+    // Webkit
+    outline: 2px auto @textColor;
+    outline-offset: -2px;
+}
+
+// modals.less
+// --------------------------------------------------
+.modal {
+    border-radius: @borderRadiusSmall;
+}
+
+.modal-header {
+    background-color: @themeColour;
+    border-bottom: 1px solid @bodyBackground;
+    .border-radius(@borderRadiusSmall @borderRadiusSmall 0 0);
+    color: @themeTextColour;
+}
+
+.modal-body {
+    background-color: @modalBodyBackgroundColour;
+    color: @modalBodyTextColour;
+}
+
+.modal-footer {
+    background-color: @pageColour;
+    border-top: 1px solid darken(@pageColour, 5%);
+    .border-radius(0 0 @borderRadiusSmall @borderRadiusSmall);
+    .box-shadow(none);
+}
+
+// navbar.less
+// --------------------------------------------------
+.navbar .btn-navbar .icon-bar {
+    background-color: @textColor;
+}
+
+.navbar-inverse {
+    .nav li.dropdown > a:hover .caret,
+    .nav li.dropdown > a:focus .caret {
+        border-top-color: @linkColorHover;
+        border-bottom-color: @linkColorHover;
+    }
+    .nav li.dropdown > .dropdown-toggle .caret {
+        border-top-color: @linkColor;
+        border-bottom-color: @linkColor;
+    }
+    .nav li.dropdown.open > .dropdown-toggle .caret,
+    .nav li.dropdown.active > .dropdown-toggle .caret,
+    .nav li.dropdown.open.active > .dropdown-toggle .caret {
+        border-top-color: @linkColorHover;
+        border-bottom-color: @linkColorHover;
+    }
+}
+
+// navs.less
+// --------------------------------------------------
+.nav-header {
+    color: @textColor;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: @bodyBackgroundAlt;
+    color: @themeTextColour;
+}
+
+// Active state, and it's :hover/:focus to override normal :hover/:focus
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+    background-color: @bodyBackgroundAlt;
+    color: @themeTextColour;
+}
+
+// Active state
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+    background-color: @bodyBackgroundAlt;
+    color: @themeTextColour;
+}
+
+// pagination.less
+// --------------------------------------------------
+.pagination ul > li > a,
+.pagination ul > li > span {
+    color: @themeTextColour;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    color: @themeTextColour;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+    color: @textColor;
+}
+
+// responsive-navbar.less
+// --------------------------------------------------
+@media (max-width: @navbarCollapseWidth) {
+    // Refix the navbar.
+    .navbar-fixed-top {
+        position: fixed;
+        .navbar-inner {
+            padding: 0;
+        }
+    }
+    .navbar-inverse .nav-collapse .nav > li > a:hover,
+    .navbar-inverse .nav-collapse .nav > li > a:focus,
+    .navbar-inverse .nav-collapse .dropdown-menu a:hover,
+    .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+        color: @bodyBackgroundAlt;
+    }
+}
+
+// responsive-767px-max.less
+// --------------------------------------------------
+@media (max-width: 767px) {
+    // Negative indent the now static "fixed" navbar
+    .navbar-fixed-top {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+// scaffolding.less
+// --------------------------------------------------
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+// thumbnails.less
+// --------------------------------------------------
+.thumbnail .caption {
+    color: @textColor;
+}
+
+// tables.less
+// --------------------------------------------------
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+    tbody {
+        > tr:nth-child(odd) > td,
+        > tr:nth-child(odd) > th {
+            color: @themeTextColour;
+            &.muted {
+                color: darken(@themeTextColour, 5%);
+            }
+            a {
+                color: inherit;
+            }
+        }
+        > tr > td,
+        > tr > th {
+            img {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: @baseBorderRadius;
+                margin-left: 1px;
+                margin-right: 1px;
+                padding: 2px;
+                &.noicon {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.table-hover {
+    tbody {
+        tr:hover > td,
+        tr:hover > th {
+            color: @themeTextColour;
+            a,
+            div {
+                color: inherit;
+            }
+        }
+    }
+}
+
+// type.less
+// --------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    small {
+        color: inherit;
+    }
+}
+
+.muted {
+    color: darken(@textColor, 5%);
+}
+a.muted:hover,
+a.muted:focus {
+    color: darken(@textColor, 8%);
+}
+
+// wells.less
+// --------------------------------------------------
+.well {
+    background-color: rgba(red(@wellBackground), green(@wellBackground), blue(@wellBackground), 0.7);
+    border: 1px dotted darken(@wellBackground, 7%);
+}

@@ -1,0 +1,20 @@
+// My changes to Bootstrap editor.less
+
+// buttons.less
+// --------------------------------------------------
+.btn {
+    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @themeTextColour, 0 1px 1px rgba(red(@btnBackground), green(@btnBackground), blue(@btnBackground), .75));
+}
+
+// scaffolding.less
+// --------------------------------------------------
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+// wells.less
+// --------------------------------------------------
+.well {
+    border: 1px dotted darken(@wellBackground, 7%);
+}

@@ -1,0 +1,67 @@
+[18-Feb-2018 14:02:41 America/Chicago] PHP Warning:  PHP Startup: SourceGuardian: Unable to initialize module
+Module compiled with module API=20151012
+PHP    compiled with module API=20100525
+These options need to match
+ in Unknown on line 0
+[18-Feb-2018 14:02:42 America/Chicago] PHP Warning:  PHP Startup: SourceGuardian: Unable to initialize module
+Module compiled with module API=20151012
+PHP    compiled with module API=20100525
+These options need to match
+ in Unknown on line 0
+[10-Jun-2018 12:17:05 America/Bogota] Cannot find session record k7sct43apvr7aqju10n8ppq9e6 for user 3, creating new session.
+[10-Jun-2018 12:17:05 America/Bogota] Cannot find session record k7sct43apvr7aqju10n8ppq9e6 for user 3, creating new session.
+[10-Jun-2018 12:17:05 America/Bogota] Cannot find session record k7sct43apvr7aqju10n8ppq9e6 for user 3, creating new session.
+[03-Jul-2018 10:44:50 America/Bogota] Exception ignored in shutdown function array (
+  0 => 
+  tool_log\log\manager::__set_state(array(
+     'readers' => 
+    array (
+      'logstore_standard' => 
+      logstore_standard\log\store::__set_state(array(
+         'logguests' => '1',
+         'manager' => NULL,
+         'component' => 'logstore_standard',
+         'store' => '',
+         'buffer' => 
+        array (
+        ),
+         'buffersize' => '50',
+         'count' => 0,
+      )),
+    ),
+     'writers' => 
+    array (
+      'logstore_standard' => 
+      logstore_standard\log\store::__set_state(array(
+         'logguests' => '1',
+         'manager' => NULL,
+         'component' => 'logstore_standard',
+         'store' => '',
+         'buffer' => 
+        array (
+        ),
+         'buffersize' => '50',
+         'count' => 0,
+      )),
+    ),
+     'stores' => 
+    array (
+      'logstore_standard' => 
+      logstore_standard\log\store::__set_state(array(
+         'logguests' => '1',
+         'manager' => NULL,
+         'component' => 'logstore_standard',
+         'store' => '',
+         'buffer' => 
+        array (
+        ),
+         'buffersize' => '50',
+         'count' => 0,
+      )),
+    ),
+  )),
+  1 => 'dispose',
+):Error al leer de la base de datos
+[15-Sep-2018 14:47:30 America/Bogota] Cannot find session record tsib9udcbppflvts7r4vlvtn96 for user 166, creating new session.
+[15-Sep-2018 14:47:30 America/Bogota] Cannot find session record tsib9udcbppflvts7r4vlvtn96 for user 166, creating new session.
+[15-Sep-2018 14:47:30 America/Bogota] Cannot find session record tsib9udcbppflvts7r4vlvtn96 for user 166, creating new session.
